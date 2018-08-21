@@ -5,10 +5,13 @@ const Food = require("../food.js");
 
 let hero;
 
+const task1 = new Task("Medium", "Do soon", "Gold", true);
+const task2 = new Task("My servant can do it", "Nah", "Low", false);
+
 describe("Hero", function(){
 
   beforeEach(function(){
-    hero = new Hero("Bean", 70, "Royal Banquet")
+    hero = new Hero("Bean", 70, "Royal Banquet") //does food need to be added here? Not sure how to get the replenishValue of the food to add up to the health of the Hero
   });
 
   it("should have a name", function(){
@@ -33,6 +36,18 @@ describe("Hero", function(){
     //assert
     assert.strictEqual(actual, "Hi my name is Bean")
   });
+
+  it("hero should be able to eat food", function(){
+    const actual = hero.eat();
+    assert.strictEqual(actual, "Bean ate a Royal Banquet")
+  });
+
+  // it("Hero health should go up when eats something", function(){
+  //   // hero.eat(favFood);
+  //   const actual = hero.healthUp();
+  //   assert.strictEqual(actual, 80)
+  // }); //not working yet
+
 
   describe("Tasks", function(){
 
@@ -64,6 +79,11 @@ describe("Hero", function(){
       const actual = task.markAsCompleted();
       assert.strictEqual(actual, true)
     });
+
+    // it("tasks should be sortable", function(){
+    //
+    //
+    // });
   });
 
   describe("Food", function(){
