@@ -1,0 +1,14 @@
+{
+  "name": "heroes_rats_hw",
+  "version": "1.0.0",
+  "description": "",
+  "main": "heroes.js",
+  "scripts": {
+    "test": "mocha specs"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "mocha": "^5.2.0"
+  }
+}
